@@ -1,44 +1,42 @@
 @charset "utf-8";
 
 html {
-  font-size: 62.5%;
+font-size: 62.5%;
 }
 
 @mixin fontsize($size: 24, $base: 10) {
-  font-size: $size + px;
-  font-size: ($size / $base) * 1rem;
+font-size: $size + px;
+font-size: ($size / $base) * 1rem;
 }
 
-// font-family
 $ja_font : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif;
-// font-family
+$blue1 : #42b9d0;
+$blue2 : #339fd1;
+$gray_blue : #eaf2f4;
 
-// colors
-$blue1 : #42b9d0 ;      //水色
-$blue2 : #339fd1 ;      //濃水色
-$gray_blue : #eaf2f4 ;  //淡緑色
+/**************************************/
 
-// header
 header{
 
   background: $gray_blue;
 
   #header_in{
-    padding-top: 15px;
-    padding-right: 0px;
-    padding-bottom: 10px;
-    padding-left: 0px;
+    padding-top: 10px;
+    padding-bottom: 4px;
   }
 
   @media (max-width: 550px) {
+
     .logo{
       width: 190px;
     }
 
     .navi{
+
       width:40px;
       float: right;
     }
+
   }
 
   .sp_navi_li{
@@ -50,8 +48,9 @@ header{
     background: white;
     margin: 0;
     padding:0;
-    z-index: 100; //追記
-    
+    display: none;
+    z-index: 100;
+
     li{
 
       list-style: none;
@@ -67,10 +66,8 @@ header{
       }
     }
   }
-}
 
-  // min-width: 551px スマホ文字非表示
-  @media (min-width: 551px) {
+  @media (min-width: 550px) {
 
     .sp_navi{
       display: none;
@@ -171,14 +168,21 @@ header{
     // .pc_navi_li
 
   }
- 
-  // max-width: 550px PC文字非表示
+  // min-width: 550px
+
   @media (max-width: 550px) {
+
     .pc_navi{
       display: none;
     }
+
   }
 
+  // min-width: 550px
+
+
+}
+// header
 // header
 
 // cover_area
@@ -509,9 +513,9 @@ h1{
 
 //contents _second page
 #contents{
-  background-color:#ffffff;
-  text-align:center;
-  padding-top: 35px;
+  background-color: #ffffff;
+  text-align: center;
+  padding-top: 20px;
   padding-bottom: 70px;
   #main{
     padding-right: 20px;
@@ -544,6 +548,8 @@ h1{
     }
   }
   @media (min-width: 551px) {
+      padding-top: 35px;
+      padding-bottom: 70px;
     h2{
       font-size:20px;
     }
@@ -611,15 +617,16 @@ h1{
 #contents_03{
   background-color:#ffffff;
   text-align:center;
-  padding-top: 35px;
+  padding-top: 20px;
   padding-bottom: 70px;
   #main{
     padding-right: 20px;
   }
+  
   h2{
     color:$blue1;
     text-align:left;
-    font-size: 2rem;
+    font-size: 1.5rem;
     border-bottom-width: 3px;
     border-bottom-style: solid;
     border-bottom-color: $blue1;
@@ -627,27 +634,36 @@ h1{
     font-weight:bold;
     margin-bottom: 0px;
   }
-.speace_01{
-  padding-right: 20px;
-}
 
-#table_com{
-  margin-top: 0px;
-  color: #626262;
-  vertical-align: middle;
-  font-size: 1.4rem;
-  tr{
-    display: table-row;
-    vertical-align: inherit;
+  .speace_01{
+    padding-right: 20px;
+  }
+
+  #table_com{
+    margin-top: 0px;
+    color: #626262;
+    vertical-align: middle;
+    font-size: 1.4rem;
     
-    .table_first{
-      font-weight: bold;
-      padding-top: 20px;
-      padding-right: 20px;
-      padding-bottom: 20px;
-      padding-left: 0px;
+    tr{
+      display: table-row;
+      vertical-align: inherit;
+    
+      .table_first{
+        font-weight: bold;
+        padding-top: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-left: 0px;
+      }
     }
   }
-  
-}
+
+  @media (min-width: 551px) {
+    padding-top: 35px;
+    padding-bottom: 70px;
+    h2{
+    font-size: 2rem;
+    }
+  }
 }
